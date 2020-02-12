@@ -1,0 +1,47 @@
+สัปดาห์ที่ 4
+Variable แบ่งได้ 2 ประเภท
+1.Local Variables ประกาศไว้ภายใน block
+2.Global Variables ประกาศไว้นอก block
+
+#include <stdio.h>
+int a = 5; --> Global
+int main()
+{
+    int b = 4; --> Local
+}
+การนิยามฟังก์ชัน
+รูปแบบของการนิยามฟังก์ชัน
+return-value-type function-name(parameter-list)
+{
+    declarations
+
+    statement
+    statement
+    :
+}
+
+Function Prototypes 
+มีลักษณะเป็น function header มีรูปแบบดังนี้
+return-value-type function-name(parameter-list);
+
+Function Call - Call by Value
+มี 2 แบบ คือ 
+1. pass by value เป็นการเรียกใช้ค่าชั่วคราวและหมดหน้าที่เมื่อจบการทำงาน
+2. pass by reference มีผลต่อค่าตั้งต้นก่อนการเรียกใช้
+
+Return Values
+- ฟังก์ชันจะมีการส่งค่ากลับ หรือไม่ก็เป็นฟังก์ชันที่มี return type เป็น void
+- หากมีการส่งค่ากลับเราใช้คีย์เวิร์ด return
+เช่น 
+return x;
+
+Recursion(การเรียกซ้ำ)
+เป็นฟังก์ชันที่มีการเรียกใช้ตัวเองซ้ำ มีรูปแบบการเขียนดังนี้
+int bit(int a)
+{
+    if(a == 0){
+        return 0;
+    }else{
+        return(bit(a/2));
+    }
+}
