@@ -1,0 +1,30 @@
+สัปดาห์ที่ 7
+    // int x = 100;
+    // int number[] = {3,4,5,6,7};
+    // int *ptr = &x;
+    // int *arrPtr;
+    // arrPtr = number; // ptr(pointer) ถ้ามีเครื่องหมาย "=" หมายถึงให้ชี้ไปที่แอดเดรสเดียวกัน
+    // arrPtr +=2;
+    // *arrPtr = *arrPtr+10; //*arrPtr คือเอาข้อมูลที่อยู่ในแอดเดรสนั้นออกมาใช้
+    // printf("arrPtr = %p, *arrPtr %d\n",arrPtr, *arrPtr);
+    // printf("number[2] = %d\n",number[2]); // number[2] จะเปลี่ยนค่าตามที่ *arrPtr เปลี่ยนด้วยเช่น +10 ที่ *arrPtr ก็+10ที่ number ด้วย
+
+    // for(int *ptr = number;ptr<= &number[4]; ptr++){
+    //     printf("[%p] = %d\n",ptr , *ptr);
+    // }
+    // int *ptr2 = number;
+    // for(int i = 0; i<5;i++){
+    //     printf("[%p] = %d\n",ptr2+i,*(ptr2+i));
+    // }
+
+    // char input[100];
+    // int count = 0;
+    // char c;
+    // while ((c = getchar()) != '\n'){
+    //     input[count] = c;
+    //     ++count;
+    // }
+    // input[count] = '\0'; //getchar จะต้องใส่ '\0' เสมอเพราะมันไม่ใสให้
+    // for (char *cPtr = input;*cPtr != '\0';cPtr++){
+    //     printf("%c\n", *cPtr);
+    // }
