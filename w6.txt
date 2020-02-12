@@ -1,0 +1,14 @@
+สัปดาห์ที่ 6
+// int x = 100;
+    // printf("X = %d\n",x);
+    // printf("reference x = %lu\n",&x);
+    // printf("reference x = %p\n",&x); // ฐาน 16 มี 00 นำหน้า %p // %x ฐาน 16 //%o ฐาน 8 
+
+    // int number[] = {3,4,5,6,7};
+    // // int number[100];
+    // // int number[100] = {3,4,5,6,7};
+    // printf("index 1 = %d\n",number[1]);
+    // printf("reference number[1] = %p\n",&number[1]);
+    // printf("reference number[0] = %p\n",&number[0]);
+    // printf("reference number = %p\n",number); // int float 4 bits // char 1 bit // double 8 bits //number+1 จะบวกเท่ากับขนาดของตัวแปร เช่น int จะบวกเพิ่มไป 4
+    // number[2000] สามารถหาค่าได้ในภาษาซี สามารถหาแอดเดรสได้
