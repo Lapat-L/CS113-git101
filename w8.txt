@@ -1,0 +1,48 @@
+สัปดาห์ที่ 8
+การใช้งาน Git เบื้องต้น
+การตรวจสอบเวอร์ชันของ Git
+    git --version
+ขั้นตอนและคำสั่งต่างๆ
+1.สร้าง directory ที่จะเก็บงาน
+2.Initialize git repository (git project)(ขั้นตอนนี้จะทำทุกครั้งที่มี git repository ใหม่)
+    git init
+    สังเกตว่า directory ชื่อ .git
+3. สร้างไฟล์ a.txt
+4.ตรวจสอบสถานะของไฟล์ ว่ามีไฟล์ใดเปลี่ยนแปลงใน git repository หรือไม่
+    git status
+    *ควรตรวจสอบสถานะของไฟล์ทุกครั้งเมื่อมีการสร้างไฟล์ใหม่ หรือไฟล์เดิมมีการแก้ไข หรือถูกลบ
+5.เพิ่มไฟล์เข้า staging area เพื่อพร้อมที่จะ commit แล้วตรวจสอบสถานะอีกครั้งหนึ่ง
+    git add a.txt
+    git status
+6.การตั้งชื่อและอีเมลเพื่อระบุตัวผู้ commit
+    git config user.name "Your Name"
+    git config user.email "email@ku.th"
+    *ถ้าเป็นเครื่องส่วนตัว ให้ใส --global(global) ด้วย
+    git config --global user.name "Your Name"
+    git config --global user.email "email@ku.th"
+    **ขั้นตอนนี้ทำครั้งเดียว
+7.Commit ไฟล์ (Checkpoint)
+    git commit -m "ชื่อที่โชว์หลัง commit"
+    option -m(message)เป็นการกำหนดว่าเราทำอะไรกับไฟล์ ณ checkpoint นี้
+8.ดู Checkpoint ทั้งหมดด้วย git log adog
+    git log --all --decorate --oneline --graph
+9.เชื่อม local repository(git repo ในเครื่องเรา)กับ github ด้วยคำสั่ง
+    git remote add <ชื่อ remote เช่น origin> <git url>
+    *หมายเหตุถ้าเราตั้งชื่อผิด ให้ลบชื่อเก่าก่อน ด้วยคำสั่ง git remote remove <ชื่อ remote>
+    แล้วจึง add ใหม่อีกครั้ง
+10.เมื่อเชื่อมกับ github แล้วให้ส่งไฟล์ด้วยคำสั่ง git push
+    git push -u origin master
+    *origin คือชื่อ remote 
+    **เมื่อรันคำสั่ง push จะขึ้นให้ใส่ user&password ของ github
+11.ตรวจสอบใน github ว่ามีไฟล์เท่ากับ checkpoint เราหรือไม่และมี commit id ตรงกับ
+    ในเครื่องเราหรือไม่
+12.ตรวจสอบ Checkpoint ทั้งหมดในเครื่องเรา จะเห็นว่า Checkpoint ของเรา
+    ได้ถูกเก็บไว้ที่ origin/master ด้วย
+    git log --all --decorate --oneline --graph
+13.ประโยชน์การใช้ git คือสามารถนำ checkpoint เก่ากลับมาทำงานได้ 2 แบบ คือชื่อ
+    1.เอากลับมาทั้งหมด git checkout <commit-id>
+    2.เอากลับมาบางไฟล์ git checkout <commit-id> <ชื่อไฟล์>
+เมื่อทำการเปลี่ยนเครื่อง หรือลบ local repository ไป แล้วอยากจะนำ git repository
+ที่เก็บไวใน server มาทำงานต่อให้ใช้คำสั่ง 
+    git clone <git-url>
+    *โดย git-url หาได้จากปุ่ม clone or download บน server
