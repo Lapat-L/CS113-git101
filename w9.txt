@@ -1,0 +1,27 @@
+สัปดาห์ที่ 9
+Git <branch merge conflict>
+1.ให้ clone จาก github
+    git clone <git-url>
+    *อย่าลืมเปลี่ยน directory
+2.คำสั่งสร้าง branch ใหม่
+    git branch <branch-name>
+    หรือสร้างและย้ายเลย
+    git checkout -b <branch-name>
+3.วิธีเช็คว่ามี branch ใดบ้าง
+    git branch
+    * โดยเครื่องหมาย * อยู่หน้าชื่อ branch ใดแปลว่าอยู่ branch นั้น
+4.วิธีเปลี่ยน branch
+    git checkout branch
+5.วิธี merge งานให้อยู่ใน branch เดียวกัน
+    ให้ย้ายไป branch ที่เป้นตัวหลักก่อน
+    เช่น git checkout master
+    หลังจากนั้นทำการ merge
+        git merge <branch ที่ต้องการรวมเข้า master>
+6.วิธีการ clone git พร้อมตั้งชื่อไฟล์
+    git clone <git-url> git-name
+7.การ pull git จาก github
+    git pull <remote-name> <branch>
+8.การ merge แบบมี conflict
+    เมื่อเกิดการรวม branch แต่มีข้อความที่จุดเดียวกันในไฟล์เดียวกันต่างกัน
+    จะเกิดการ conflict ให้เราแก้ไขแล้วค่อย add->commit ใหม่
+
